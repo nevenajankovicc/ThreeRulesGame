@@ -14,6 +14,11 @@ buildscript {
   }
 }
 
+ext {
+  gdxVersion = '1.11.0'  // ili najnovija verzija LibGDX-a, možeš proveriti na https://libgdx.com
+  projectVersion = '1.0'
+}
+
 allprojects {
   apply plugin: 'eclipse'
   apply plugin: 'idea'
@@ -71,3 +76,18 @@ subprojects {
 }
 
 eclipse.project.name = 'RulesJam2025' + '-parent'
+
+
+
+project(':core') {
+  dependencies {
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+  }
+}
+
+project(':lwjgl3') {
+  dependencies {
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+  }
+}
