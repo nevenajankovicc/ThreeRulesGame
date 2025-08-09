@@ -1,33 +1,33 @@
-# RulesJam2025
+Three Rules - Game Jam 2025
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+Game Description
+"Three Rules" is a grid-based game inspired by the Game Jam theme where the player must navigate through cells, collect all crystals, and reach the goal while following three movement rules.
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+Game Rules
+1. The player cannot step on the same cell more than once.
+2. The player cannot make more than two consecutive moves in the same direction.
+3. The player must collect all crystals before reaching the end.
 
-## Platforms
+Goal
+The goal is to reach the last cell of the grid (top-right corner) after collecting all crystals while following the rules above.
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+Controls
+-Use the arrow keys on your keyboard to move the player up, down, left, and right.
+-Press SPACE to reset the game or to start the game after the rules screen.
 
-## Gradle
+Game Flow
+-At the start, the rules screen is displayed.
+-After pressing SPACE, the game begins and the grid is shown.
+-During the game, the current number of steps and the best score are displayed.
+-If the player breaks any rule, the game ends with a "GAME OVER" message.
+-If the player collects all crystals and reaches the goal, a victory message is shown.
+-The game can be restarted anytime by pressing SPACE.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+Technologies
+The game is developed in Java using the LibGDX framework.
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
-
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+How to Run the Game
+1. Clone the repository:
+git clone https://github.com/nevenajankovicc/ThreeRulesGame.git
+2. Open the project in IntelliJ IDEA or any other Java IDE.
+3. Run the Lwjgl3Launcher class to start the game.
